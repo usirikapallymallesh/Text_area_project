@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>auto text area saver</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body id="holeBody">
+    <!-- loader effect -->
+    <div class="center">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    <!-- load completed -->
+    <div class="mainContainer">
+      <h1 id="element">Auto Save Textarea</h1>
+      <textarea
+        name=""
+        cols="50"
+        rows="20"
+        id="text-area"
+        placeholder="Start typing here..."
+      ></textarea>
+    </div>
+    <button id="toggle" onclick="toggleMode()">Dark Mode</button>
+
+    <script src="./script.js"></script>
+    <script>
+      window.onload = function () {
+        let i = document.getElementsByClassName("center")[0];
+        i.style.display = "none";
+      };
+    </script>
+
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["<i>Text</i> Area.", "Auto Save Textarea.."],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
